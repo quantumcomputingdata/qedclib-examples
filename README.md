@@ -24,11 +24,15 @@ Getting started with qedclib — configuring backends, running circuits, and ret
 - **02_basic_execution.py** — Execute multiple circuits as a batch using `execute_circuits()` and inspect results. Shows the simplest path for running circuits without metrics overhead.
 - **03_execution_with_metrics.py** — Full metrics-integrated execution using `submit_circuits()`. Demonstrates circuit grouping, custom result handlers for fidelity computation, automatic timing collection, and circuit depth metrics. This is the recommended pattern for applications that need performance data.
 
-### applications/
-Real-world use cases: parameter sweeps for phase diagrams, variational circuits for ML, and other computational science workflows.
-
 ### backends/
 Working with different execution targets — local simulators, IBM Quantum, IonQ, IQM — and switching between them.
+
+- **04_hardware_execution.py** — Run circuits on real quantum hardware. Shows configuration patterns for IBM Quantum, IonQ, and IQM, with command-line backend selection. Defaults to local simulator for testing.
+
+### applications/
+Real-world use cases showing qedclib as a general-purpose execution engine with circuits from external sources.
+
+- **05_external_circuits.py** — Execute circuits from [MQT Bench](https://mqt.readthedocs.io/projects/bench/) with qedclib metrics. Demonstrates the key pattern: bring circuits from any source, let qedclib handle execution, timing, and fidelity analysis. Requires `pip install mqt.bench`.
 
 ## Documentation
 
